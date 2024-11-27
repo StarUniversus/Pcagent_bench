@@ -95,7 +95,8 @@ api_models = {
     "JTVL": partial(JTVLChatAPI, model='jt-vl-chat', temperature=0, retry=10),
     "Taiyi": partial(TaiyiAPI, model='taiyi', temperature=0, retry=10),
     # TeleMM
-    'TeleMM': partial(TeleMM, model='TeleAI/TeleMM', frequency_penalty=0, retry=10)
+    'TeleMM': partial(TeleMM, model='TeleAI/TeleMM', frequency_penalty=0, retry=10),
+    "CorrectFlow": partial(CorrectFlow, model="gpt-4o-2024-08-06", temperature=0, img_size=-1, img_detail='high', retry=10, verbose=False),
 }
 
 mmalaya_series = {

@@ -98,8 +98,8 @@ You can launch the evaluation by setting either --data and --model or --config.
 """
     parser = argparse.ArgumentParser(description=help_msg, formatter_class=argparse.RawTextHelpFormatter)
     # Essential Args, Setting the Names of Datasets and Models
-    parser.add_argument('--data', type=str, nargs='+', help='Names of Datasets')
-    parser.add_argument('--model', type=str, nargs='+', help='Names of Models')
+    parser.add_argument('--data', type=str, nargs='+', default=['PcAgent_Bench'])
+    parser.add_argument('--model', type=str, nargs='+', default=['CorrectFlow'])
     parser.add_argument('--config', type=str, help='Path to the Config Json File')
     # Args that only apply to Video Dataset
     parser.add_argument('--nframe', type=int, default=8)
@@ -111,7 +111,7 @@ You can launch the evaluation by setting either --data and --model or --config.
     # Infer + Eval or Infer Only
     parser.add_argument('--mode', type=str, default='all', choices=['all', 'infer'])
     # API Kwargs, Apply to API VLMs and Judge API LLMs
-    parser.add_argument('--nproc', type=int, default=4, help='Parallel API calling')
+    parser.add_argument('--nproc', type=int, default=1, help='Parallel API calling')
     parser.add_argument('--retry', type=int, default=None, help='retry numbers for API VLMs')
     # Explicitly Set the Judge Model
     parser.add_argument('--judge', type=str, default=None)
@@ -303,6 +303,8 @@ def main():
                         api_nproc=args.nproc,
                         ignore_failed=args.ignore)
                 else:
+                    #Debug
+                    # dataset.data = dataset.data[-2:]
                     model = infer_data_job(
                         model,
                         work_dir=pred_root,
