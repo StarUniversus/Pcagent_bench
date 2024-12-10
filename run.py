@@ -98,8 +98,8 @@ You can launch the evaluation by setting either --data and --model or --config.
 """
     parser = argparse.ArgumentParser(description=help_msg, formatter_class=argparse.RawTextHelpFormatter)
     # Essential Args, Setting the Names of Datasets and Models
-    parser.add_argument('--data', type=str, nargs='+', default=['PcAgent_Bench'])
-    parser.add_argument('--model', type=str, nargs='+', default=['CorrectFlow'])
+    parser.add_argument('--data', type=str, nargs='+', default=['PcAgent_Bench_Hint'])
+    parser.add_argument('--model', type=str, nargs='+', default=['GPT4o_20240806'])
     parser.add_argument('--config', type=str, help='Path to the Config Json File')
     # Args that only apply to Video Dataset
     parser.add_argument('--nframe', type=int, default=8)

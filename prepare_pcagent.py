@@ -18,14 +18,14 @@ benchmark_data = [
     {key.replace('image_path', 'image'): value for key, value in item.items()}
     for item in benchmark_data
 ]
-benchmark_data = [
-    {key: value for key, value in item.items() if key != 'hint'}
-    for item in benchmark_data
-]
+# benchmark_data = [
+#     {key: value for key, value in item.items() if key != 'hint'}
+#     for item in benchmark_data
+# ]
 benchmark_data = [
     {**item, 'image': encode_image_file_to_base64("/root/VLMEvalKit/Agent_Eval/" + item['image'])} if 'image' in item else item
     for item in tqdm(benchmark_data, desc="Encoding images")
 ]
 
 benchmark_df = pd.DataFrame(benchmark_data)
-benchmark_df.to_csv('/root/VLMEvalKit/Agent_Eval/benchmark.tsv', sep='\t', index_label='index')
+benchmark_df.to_csv('/root/Agent_benchmark/VLMEvalKit/benchmark.tsv', sep='\t', index_label='index')

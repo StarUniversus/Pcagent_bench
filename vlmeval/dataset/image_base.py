@@ -83,8 +83,10 @@ class ImageBaseDataset:
         data_root = LMUDataRoot()
         os.makedirs(data_root, exist_ok=True)
         update_flag = False
-        if "lxy-obs" in url:
+        if "lxy-obs" and "pcagent_bench.tsv" in url:
             file_name = "pcagent_bench.tsv"
+        elif "lxy-obs" and "benchmark_hint.tsv" in url:
+            file_name = "pcagent_bench_hint.tsv"
         else:
             file_name = url.split('/')[-1]
         data_path = osp.join(data_root, file_name)

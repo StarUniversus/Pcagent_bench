@@ -81,7 +81,7 @@ class ImageMCQDataset(ImageBaseDataset):
         'R-Bench-Ref': 'https://huggingface.co/datasets/lcysyzxdxc/R-Bench/blob/main/R-bench-ref.tsv',
         # Other Benchmarks
         'CCBench': 'https://opencompass.openxlab.space/utils/VLMEval/CCBench.tsv',
-        'AI2D_TEST': 'https://opencompass.openxlab.space/utils/VLMEval/AI2D_TEST.tsv',
+        'AI2D_TEST': 'https://opencompass.openxlab.space/utils/VLMEval/AI2D_TEST.tsv', 
         'AI2D_TEST_NO_MASK': 'https://opencompass.openxlab.space/utils/VLMEval/AI2D_TEST_NO_MASK.tsv',
         'MMStar': 'https://opencompass.openxlab.space/utils/VLMEval/MMStar.tsv',
         'RealWorldQA': 'https://opencompass.openxlab.space/utils/VLMEval/RealWorldQA.tsv',
@@ -93,7 +93,8 @@ class ImageMCQDataset(ImageBaseDataset):
         ),
         'A-OKVQA': 'https://huggingface.co/datasets/Allen8/A-OKVQA/resolve/main/a-okvqa.tsv',
         'WorldMedQA-V': 'https://opencompass.openxlab.space/utils/VLMEval/WorldMedQA-V.tsv',
-        'PcAgent_Bench': 'https://lxy-obs.obs.syaicenter.com:443/pcagent_bench.tsv?AccessKeyId=GIMODL7OGHWNODNJATYW&Expires=1748245263&Signature=TJXKhXtR07EjEcQqaxefnicxbY4%3D'
+        'PcAgent_Bench': 'https://lxy-obs.obs.syaicenter.com:443/pcagent_bench.tsv?AccessKeyId=GIMODL7OGHWNODNJATYW&Expires=1748245263&Signature=TJXKhXtR07EjEcQqaxefnicxbY4%3D',
+        'PcAgent_Bench_Hint': 'https://lxy-obs.obs.syaicenter.com:443/benchmark_hint.tsv?AccessKeyId=GIMODL7OGHWNODNJATYW&Expires=1736411887&Signature=YolGGBzoOh0UF5EkBI1fCfSNYr8%3D'
     }
 
     DATASET_MD5 = {

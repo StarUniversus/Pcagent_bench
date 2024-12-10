@@ -54,6 +54,8 @@ pip install -e .
 ```bash
 # 在 PcAgent_Bench(咱自己的数据) 上使用 GPT4o_20240806 进行推理和评估
 python run.py --data PcAgent_Bench --model GPT4o_20240806 --nproc 30 --verbose
+# 在 PcAgent_Bench_Hint(咱自己的数据带上下文) 上使用 GPT4o_20240806 进行推理和评估
+python run.py --data PcAgent_Bench_Hint --model GPT4o_20240806 --nproc 30 --verbose
 # 在 PcAgent_Bench(咱自己的数据) 上使用 CorrectFLow（咱自己的模型） 进行推理和评估
 python run.py --data PcAgent_Bench --model CorrectFLow --nproc 30 --verbose
 
